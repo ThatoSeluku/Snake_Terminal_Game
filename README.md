@@ -35,8 +35,3 @@ A Python game built to keep my skills sharp. This should be a beginner-intermedi
 
 
 
-
-
-python snake_game.py
-
-
