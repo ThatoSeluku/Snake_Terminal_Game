@@ -30,3 +30,10 @@ def check_collisions():
  
 def game_over():
         pass
+
+window = Tk()
+window.title("Snake 2025")
+window.resizable(False, False)
+
+
+window.mainloop()
