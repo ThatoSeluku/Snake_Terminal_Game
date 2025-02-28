@@ -4,8 +4,8 @@ import random
 # Game constants 
 GAME_WIDTH = 700
 GAME_HEIGHT = 700
-SPEED = 50
-SPACE_SIZE = 50
+SPEED = 100
+SPACE_SIZE = 20
 BODY_PARTS = 3 
 SNAKE_COLOR = "#00FF00"
 FOOD_COLOR = "#FF0000"
@@ -114,7 +114,8 @@ def check_collisions(snake):
                         return True 
  
 def game_over():
-        pass
+        canvas.delete(ALL)
+        canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2, font=('consolas', 80), text="Game Over", fill="red")
 
 window = Tk()
 window.title("Snake 2025")
