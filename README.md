@@ -26,7 +26,15 @@ A Python game built to keep my skills sharp. This should be a beginner-intermedi
 1. Clone the repository to your local machine:
    ```bash
    git clone https://github.com/yourusername/Snake_Terminal_Game.git
-cd Snake_Terminal_Game
+2. Navigate to the game:
+   ```bash
+   cd Snake_Terminal_Game
+3. Play the game:
+   ```bash
+   python snake_game.py
+
+
+
 
 
 python snake_game.py
