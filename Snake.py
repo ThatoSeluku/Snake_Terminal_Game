@@ -17,7 +17,14 @@ class Snake:
         pass 
 
 class Food:
-        pass
+        def __init__(self):
+              
+                x = random.randint(0, (GAME_WIDTH // SPACE_SIZE) - 1) * SPACE_SIZE
+                y  = random.randint(0, (GAME_HEIGHT // SPACE_SIZE) - 1) * SPACE_SIZE
+                
+                self.coordinates = [x, y]
+
+                canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=FOOD_COLOR, tag="food")
 
 #Creation of game functions 
 def next_turn():
@@ -60,5 +67,10 @@ y = int((screen_height/2) - (window_height/2))
 
 #Set geometry:
 window.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
+#Create snake and food objects:
+snake = Snake()
+food = Food()
+
 
 window.mainloop()
