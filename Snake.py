@@ -76,8 +76,12 @@ def next_turn(snake, food):
                 del snake.squares[-1]
                 
 
+        if check_collisions(snake):
+                game_over()
+
+        else:
         # Call next turn recursively
-        window.after(SPEED, next_turn, snake, food)
+                window.after(SPEED, next_turn, snake, food)
 
 def change_direction(new_direction):
         global direction
@@ -96,8 +100,18 @@ def change_direction(new_direction):
                 if direction != 'up':
                         direction = new_direction
                         
-def check_collisions():
-         pass
+def check_collisions(snake):
+
+        #Check if snake touches wall coordinates:
+         x, y = snake.coordinates[0]
+         if x < 0 or x>= GAME_WIDTH:
+                return True
+         elif y < 0 or y>= GAME_HEIGHT:
+                print("Game Over")
+                return True
+         for body_part in snake.coordinates[1:]:
+                if x == body_part[0] and y == body_part[1]:
+                        return True 
  
 def game_over():
         pass
